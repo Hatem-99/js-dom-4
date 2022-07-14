@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+
+    <div class="contaner">
+        <div class="bingoTitle">
+            <h1>B    I    N    G    O</h1>
+        </div>
+        <div id="bingoNumbersContaner">
+            
+        </div>
+    </div>
+    <button click="randomisedNumber()" id="randomNumber">Random number</button>
+<script>
+
+
+const createNumbers = function(){
+    let contaner = document.getElementById("bingoNumbersContaner")
+    for(let ballNumber = 1 ; ballNumber <= 76 ;ballNumber++){
+let numbersNode = document.createElement("div")
+numbersNode.innerText = ballNumber
+contaner.appendChild(numbersNode)
+numbersNode.classList.add("numbersNode")
+
+}
+
+}
+const randomisedNumber = function(){
+    let number =parseInt (Math.random() * (76 - 1) + 1)
+    return number
+    
+}
+
+
+
+const randomNumberHighlight = function(){
+    let randomNumber = ranomisedNumber().value
+    let contaner = document.getElementById("bingoNumbersContaner")
+    let numbers = contaner.getElementsByTagName("div")
+    for(let i = 0 ;i > numbers.length; i++){
+        if(randomNumber === i){
+        i.classList.add("highlight")
+        }
+    }
+
+}
+
+
+
+window.onload = function(){
+    createNumbers()
+    
+}
+
+
+
+</script>
+</body>
+</html>
+
+
+
+ 
