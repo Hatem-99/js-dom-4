@@ -1,6 +1,6 @@
 #bingoNumbersContaner{
-    width: 500px;
-    height: 500px;
+    width: 470px;
+    
     border: 2px solid black;
     margin: auto;
     background-color: rgb(9, 25, 68);
@@ -15,18 +15,18 @@ html {
     height: 50px;
     margin: auto;
     
+
+    
 }
 .bingoTitle h1{
     width: 100%;
 }
 
 #randomNumber{
-    width: 200px;
-    height: 100px;
-    position: absolute;
-    bottom: 50px;
-    left: 250px;
-    
+    width: 100px;
+    height: 50px;
+    margin: auto;
+    display: block;
 }
 
 
@@ -35,12 +35,13 @@ html {
     height: 50px;
     display: inline-block;
     text-align: center;
-    justify-items: center;
+    margin-top: 2px;
     font-size: x-large;
     font-weight: bolder;
     color: #ebebeb ;
+    border: 0.5px solid black;
 }
 
 .highlight{
-    border: 0.5px solid black;
+    border: 1.5px solid black;
 }

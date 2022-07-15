@@ -16,8 +16,9 @@
         <div id="bingoNumbersContaner">
             
         </div>
+        <button onclick="randomNumberHighlight()"  id="randomNumber">Random number</button>
     </div>
-    <button click="randomisedNumber()" id="randomNumber">Random number</button>
+    
 <script>
 
 
@@ -32,22 +33,23 @@ numbersNode.classList.add("numbersNode")
 }
 
 }
-const randomisedNumber = function(){
-    let number =parseInt (Math.random() * (76 - 1) + 1)
-    return number
+
     
-}
+    
+
 
 
 
 const randomNumberHighlight = function(){
-    let randomNumber = ranomisedNumber().value
+    let number =parseInt (Math.random() * (76 - 1) + 1)
+    let randomNumber = number
     let contaner = document.getElementById("bingoNumbersContaner")
     let numbers = contaner.getElementsByTagName("div")
     for(let i = 0 ;i > numbers.length; i++){
-        if(randomNumber === i){
-        i.classList.add("highlight")
-        }
+
+     if(i === number){
+        i.classList.add(highlight)
+     }
     }
 
 }
